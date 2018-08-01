@@ -9,3 +9,10 @@ are simply hacked into the default Vue boilerplate.
 yarn install
 yarn run serve
 ```
+
+## Next steps
+
+- [ ] port vx/text
+- [ ] fix vx/axis
+- [ ] port remaining charts
+- [ ] bundle as library
