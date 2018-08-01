@@ -4,14 +4,14 @@
       :class="`vx-linepath ${className}`"
       :d="path(data)"
       :stroke="stroke"
-      :strokeWidth="strokeWidth"
+      :stroke-width="strokeWidth"
       :stroke-dasharray="strokeDasharray"
-      :strokeDashoffset="strokeDashoffset"
+      :stroke-dashoffset="strokeDashoffset"
       :fill="fill"
       v-bind="restProps"
     />
-    <g v-if="glyph" class="vx-linepath-glyphs">
-      {{ data.map(glyph) }}
+    <g class="vx-linepath-glyphs">
+      <slot />
     </g>
   </g>
 </template>
@@ -51,7 +51,6 @@ export default {
       type: String,
       default: 'none'
     },
-    glyph: Function,
     curve: {
       type: Function,
       default: curveLinear

@@ -15,6 +15,8 @@
     <stacked-area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></stacked-area-graph>
     <br><br>
     <gradient-graph :width="width" :height="height"></gradient-graph>
+    <br><br>
+    <glyph-graph :width="width" :height="height"></glyph-graph>
   </div>
 </template>
 
@@ -26,6 +28,7 @@ import PatternGraph from './PatternGraph'
 import AreaGraph from './AreaGraph'
 import StackedAreaGraph from './StackedAreaGraph'
 import GradientGraph from './GradientGraph'
+import GlyphGraph from './GlyphGraph'
 
 export default {
   name: 'HelloWorld',
@@ -54,7 +57,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph
   }
 }
 </script>

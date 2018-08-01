@@ -7,7 +7,7 @@
         :r="r"
         :fill="fill"
         :stroke="stroke"
-        :strokeWidth="strokeWidth"
+        :stroke-width="strokeWidth"
         :stroke-dasharray="strokeDasharray"
         v-bind="restProps"
       />
@@ -33,7 +33,7 @@ export default {
     r: Number,
     fill: String,
     stroke: String,
-    strokeWidth: String,
+    strokeWidth: Number,
     strokeDasharray: String,
     restProps: Object
   },

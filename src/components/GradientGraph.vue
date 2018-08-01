@@ -17,7 +17,7 @@
       :height="h"
       fill="url(#LightgreenGreen)"
       stroke="#ffffff"
-      :strokeWidth="8"
+      :stroke-width="8"
       :rx="14"
     />
     <Bar
@@ -28,7 +28,7 @@
       fill="url(#OrangeRed)"
       :rx="14"
       stroke="#ffffff"
-      :strokeWidth="8"
+      :stroke-width="8"
     />
     <Bar
       :x="w * 2"
@@ -38,7 +38,7 @@
       fill="url(#PinkBlue)"
       :rx="14"
       stroke="#ffffff"
-      :strokeWidth="8"
+      :stroke-width="8"
     />
     <Bar
       :x="w * 3"
@@ -48,7 +48,7 @@
       fill="url(#DarkgreenGreen)"
       :rx="14"
       stroke="#ffffff"
-      :strokeWidth="8"
+      :stroke-width="8"
     />
     <Bar
       :x="0"
@@ -58,7 +58,7 @@
       fill="url(#PinkRed)"
       :rx="14"
       stroke="#ffffff"
-      :strokeWidth="8"
+      :stroke-width="8"
     />
     <Bar
       :x="w"
@@ -68,7 +68,7 @@
       fill="url(#TealBlue)"
       :rx="14"
       stroke="#ffffff"
-      :strokeWidth="8"
+      :stroke-width="8"
     />
     <Bar
       :x="w * 2"
@@ -78,7 +78,7 @@
       fill="url(#PurpleOrange)"
       :rx="14"
       stroke="#ffffff"
-      :strokeWidth="8"
+      :stroke-width="8"
     />
     <Bar
       :x="w * 3"
@@ -88,7 +88,7 @@
       fill="url(#Radial)"
       :rx="14"
       stroke="#ffffff"
-      :strokeWidth="8"
+      :stroke-width="8"
     />
   </svg>
 </template>

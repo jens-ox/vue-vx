@@ -13,7 +13,7 @@
         :class="`vx-pattern-line ${className}`"
         :d="pathForOrientation({ orientation: o, height })"
         :stroke="stroke"
-        :strokeWidth="strokeWidth"
+        :stroke-width="strokeWidth"
         :stroke-dasharray="strokeDasharray"
         :strokeLinecap="strokeLinecap"
         :shapeRendering="shapeRendering"

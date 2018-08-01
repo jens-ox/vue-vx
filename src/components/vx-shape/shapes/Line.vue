@@ -7,7 +7,7 @@
     :x2="to.x"
     :y2="to.y"
     :stroke="stroke"
-    :strokeWidth="strokeWidth"
+    :stroke-width="strokeWidth"
     :stroke-dasharray="strokeDasharray"
     :transform="transform"
     v-bind="restProps"

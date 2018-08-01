@@ -10,7 +10,7 @@
     :fill="fill"
     :fillOpacity="fillOpacity"
     :stroke="stroke"
-    :strokeWidth="strokeWidth"
+    :stroke-width="strokeWidth"
     :stroke-dasharray="strokeDasharray"
     :strokeLinecap="strokeLinecap"
     :strokeLinejoin="strokeLinejoin"

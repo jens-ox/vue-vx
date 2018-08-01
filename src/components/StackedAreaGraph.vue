@@ -18,7 +18,7 @@
       :x="(d) => xScale(x(d.data))"
       :y0="(d) => yScale(d[0] / 100)"
       :y1="(d) => yScale(d[1] / 100)"
-      :strokeWidth="0"
+      :stroke-width="0"
       fill="url(#OrangeRed)"
       :fillOpacity="1"
     />

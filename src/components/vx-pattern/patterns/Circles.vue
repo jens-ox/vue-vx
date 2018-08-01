@@ -8,7 +8,7 @@
       :r="radius"
       :fill="fill"
       :stroke="stroke"
-      :strokeWidth="strokeWidth"
+      :stroke-width="strokeWidth"
       :stroke-dasharray="strokeDasharray"
     />
     <circle v-if="complement" v-for="[cornerX, cornerY] in corners"
@@ -19,7 +19,7 @@
       :r="radius"
       :fill="fill"
       :stroke="stroke"
-      :strokeWidth="strokeWidth"
+      :stroke-width="strokeWidth"
       :stroke-dasharray="strokeDasharray"
     ></circle>
   </AbstractPattern>

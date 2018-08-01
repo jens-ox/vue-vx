@@ -40,7 +40,7 @@
         :yScale="yScale"
         :x="xStock"
         :y="yStock"
-        :strokeWidth="1"
+        :stroke-width="1"
         stroke="url(#gradient)"
         fill="url(#gradient)"
         :curve="curveMonotoneX"
@@ -78,7 +78,7 @@
           :from="{ x: tooltipLeft, y: 0 }"
           :to="{ x: tooltipLeft, y: yMax }"
           stroke="rgba(92, 119, 235, 1.000)"
-          :strokeWidth="2"
+          :stroke-width="2"
           :style="{ pointerEvents: 'none' }"
           stroke-dasharray="2,2"
         />
@@ -90,7 +90,7 @@
           :fillOpacity="0.1"
           stroke="black"
           :strokeOpacity="0.1"
-          :strokeWidth="2"
+          :stroke-width="2"
           :style="{ pointerEvents: 'none' }"
         />
         <circle
@@ -99,7 +99,7 @@
           :r="4"
           fill="rgba(92, 119, 235, 1.000)"
           stroke="white"
-          :strokeWidth="2"
+          :stroke-width="2"
           :style="{ pointerEvents: 'none' }"
         />
       </g>

@@ -21,7 +21,7 @@
         :x="x"
         :y="y"
         stroke="#ffffff"
-        :strokeWidth="1"
+        :stroke-width="1"
         :curve="curve(i)"
       />
     </Group>

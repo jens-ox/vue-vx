@@ -5,7 +5,7 @@
       :className="`vx-area-closed ${className}`"
       :d="path(data)"
       :stroke="stroke"
-      :strokeWidth="strokeWidth"
+      :stroke-width="strokeWidth"
       :stroke-dasharray="strokeDasharray"
       :fill="fill"
       :transform="`translate(${left}, ${top})`"

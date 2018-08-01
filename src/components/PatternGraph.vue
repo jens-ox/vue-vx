@@ -7,14 +7,14 @@
         :height="6"
         :width="6"
         stroke="black"
-        :strokeWidth="1"
+        :stroke-width="1"
       />
       <PatternLines
         useID="hLines"
         :height="6"
         :width="6"
         stroke='black'
-        :strokeWidth="1"
+        :stroke-width="1"
         :orientation="['horizontal']"
       />
       <PatternLines
@@ -22,7 +22,7 @@
         :height="6"
         :width="6"
         stroke='black'
-        :strokeWidth="1"
+        :stroke-width="1"
         :orientation="['diagonal']"
       />
       <PatternLines
@@ -30,7 +30,7 @@
         :height="6"
         :width="6"
         stroke='black'
-        :strokeWidth="1"
+        :stroke-width="1"
         :orientation="['vertical', 'horizontal']"
       />
       <PatternCircles
@@ -52,7 +52,7 @@
         :width="6"
         fill="transparent"
         stroke="black"
-        :strokeWidth="1"
+        :stroke-width="1"
         complement
       />
       <PatternWaves
@@ -61,7 +61,7 @@
         :width="12"
         fill="transparent"
         stroke="black"
-        :strokeWidth="1"
+        :stroke-width="1"
         complement
       />
       <Bar

@@ -5,7 +5,7 @@
       :from="fromPoint(x(d))"
       :to="toPoint(x(d))"
       :stroke="stroke"
-      :strokeWidth="strokeWidth"
+      :stroke-width="strokeWidth"
       :stroke-dasharray="strokeDasharray"
       :style="lineStyle"
       v-bind="restProps"

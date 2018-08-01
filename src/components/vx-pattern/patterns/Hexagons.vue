@@ -10,7 +10,7 @@
     :height="s"
     :fill="fill"
     :stroke="stroke"
-    :strokeWidth="strokeWidth"
+    :stroke-width="strokeWidth"
     :stroke-dasharray="strokeDasharray"
     :strokeLinecap="strokeLinecap"
     :shapeRendering="shapeRendering"
