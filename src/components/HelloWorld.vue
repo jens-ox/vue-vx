@@ -17,6 +17,9 @@
     <gradient-graph :width="width" :height="height"></gradient-graph>
     <br><br>
     <glyph-graph :width="width" :height="height"></glyph-graph>
+    <br><br>
+    <!-- <axis-graph :width="width" :height="height"></axis-graph> -->
+    <bar-group-graph :width="width" :height="height"></bar-group-graph>
   </div>
 </template>
 
@@ -29,6 +32,8 @@ import AreaGraph from './AreaGraph'
 import StackedAreaGraph from './StackedAreaGraph'
 import GradientGraph from './GradientGraph'
 import GlyphGraph from './GlyphGraph'
+// import AxisGraph from './AxisGraph'
+import BarGroupGraph from './BarGroupGraph'
 
 export default {
   name: 'HelloWorld',
@@ -57,7 +62,8 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph
+    // AxisGraph
   }
 }
 </script>
