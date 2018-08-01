@@ -1,21 +1,4 @@
 # vue-vx
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+This is a vue port of [vx](https://github.com/hshoff/vx/).
+It is currently in development and therefore far from usable.
