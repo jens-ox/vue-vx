@@ -18,7 +18,8 @@
     <br><br>
     <glyph-graph :width="width" :height="height"></glyph-graph>
     <br><br>
-    <!-- <axis-graph :width="width" :height="height"></axis-graph> -->
+    <axis-graph :width="width" :height="height"></axis-graph>
+    <br><br>
     <bar-group-graph :width="width" :height="height"></bar-group-graph>
   </div>
 </template>
@@ -32,7 +33,7 @@ import AreaGraph from './AreaGraph'
 import StackedAreaGraph from './StackedAreaGraph'
 import GradientGraph from './GradientGraph'
 import GlyphGraph from './GlyphGraph'
-// import AxisGraph from './AxisGraph'
+import AxisGraph from './AxisGraph'
 import BarGroupGraph from './BarGroupGraph'
 
 export default {
@@ -62,8 +63,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph
-    // AxisGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph
   }
 }
 </script>

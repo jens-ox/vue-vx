@@ -60,7 +60,6 @@
           'dx': '-0.25em',
           'dy': '0.25em'
         })"
-        tickComponent="text"
       />
       <AxisRight
         :top="margin.top"
@@ -93,25 +92,6 @@
         :numTicks="numTicksForWidth(width)"
         label="Time"
       >
-        <g className="my-custom-bottom-axis">
-          <Group v-for="(tick, i) in ticks"
-            v-bind:key="`vx-tick-${tick.value}-${i}`"
-            className="vx-axis-tick'"
-          >
-            <Line :from="tick.from" :to="tick.to" :stroke="tickColor" />
-            <text
-              :transform="`translate(${tick.to.x}, ${tick.to.y + tickLabelSize + props.tickLength}) rotate(${tickRotate})`"
-              :fontSize="tickLabelSize"
-              text-anchor="middle"
-              :fill="tickColor"
-            >
-              {{ tick.formattedValue }}
-            </text>
-          </Group>
-          <text text-anchor="middle" :transform="`translate(${axisCenter}, 50)`" fontSize="8">
-            {{ props.label }}
-          </text>
-        </g>
       </AxisBottom>
     </Group>
   </svg>

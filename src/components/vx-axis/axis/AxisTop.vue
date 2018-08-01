@@ -24,7 +24,6 @@
     :tickStroke="tickStroke"
     :tickTransform="tickTransform"
     :tickValues="tickValues"
-    :tickComponent="tickComponent"
     :top="top"
   />
 </template>

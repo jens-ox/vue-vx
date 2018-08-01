@@ -150,7 +150,6 @@ export default {
     },
     tickTransform: String,
     tickValues: Array,
-    tickComponent: Function,
     top: {
       type: Number,
       default: 0
