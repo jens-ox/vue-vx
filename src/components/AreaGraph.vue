@@ -71,7 +71,7 @@
             xScale,
             yScale,
           })"
-        v-on:mouseLeave="data => hideTooltip()"
+        v-on:mouseleave.native="hideTooltip()"
       />
       <g v-if="tooltipData">
         <LineShape
@@ -106,6 +106,7 @@
     </svg>
     <div v-if="tooltipData">
       <Tooltip
+        v-if="tooltipOpen"
         :top="tooltipTop - 12"
         :left="tooltipLeft + 12"
         :style="{
@@ -116,6 +117,7 @@
         {{ '$' + yStock(tooltipData) }}
       </Tooltip>
       <Tooltip
+        v-if="tooltipOpen"
         :top="yMax - 14"
         :left="tooltipLeft"
         :style="{

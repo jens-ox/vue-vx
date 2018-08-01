@@ -8,6 +8,7 @@
       :strokeWidth="strokeWidth"
       :stroke-dasharray="strokeDasharray"
       :fill="fill"
+      :transform="`translate(${left}, ${top})`"
       v-bind="restProps"
     />
   </g>
@@ -17,6 +18,14 @@ import { area } from 'd3-shape'
 
 export default {
   props: {
+    top: {
+      type: Number,
+      default: 0
+    },
+    left: {
+      type: Number,
+      default: 0
+    },
     x: Function,
     y: Function,
     y0: Function,

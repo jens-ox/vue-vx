@@ -10,7 +10,9 @@
     <br><br>
     <pattern-graph :width="width" :height="height"></pattern-graph>
     <br><br>
-    <area-graph :width="width" :height="height" :margin="{ top: 0, bottom: 0, left: 0, right: 0 }"></area-graph>
+    <area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></area-graph>
+    <br><br>
+    <stacked-area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></stacked-area-graph>
   </div>
 </template>
 
@@ -20,6 +22,7 @@ import BarGraph from './BarGraph'
 import PointGraph from './PointGraph'
 import PatternGraph from './PatternGraph'
 import AreaGraph from './AreaGraph'
+import StackedAreaGraph from './StackedAreaGraph'
 
 export default {
   name: 'HelloWorld',
@@ -48,7 +51,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph
   }
 }
 </script>
