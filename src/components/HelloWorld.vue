@@ -13,6 +13,8 @@
     <area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></area-graph>
     <br><br>
     <stacked-area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></stacked-area-graph>
+    <br><br>
+    <gradient-graph :width="width" :height="height"></gradient-graph>
   </div>
 </template>
 
@@ -23,6 +25,7 @@ import PointGraph from './PointGraph'
 import PatternGraph from './PatternGraph'
 import AreaGraph from './AreaGraph'
 import StackedAreaGraph from './StackedAreaGraph'
+import GradientGraph from './GradientGraph'
 
 export default {
   name: 'HelloWorld',
@@ -51,7 +54,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph
   }
 }
 </script>

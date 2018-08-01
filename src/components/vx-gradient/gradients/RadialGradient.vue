@@ -1,7 +1,7 @@
 <template>
   <defs>
     <radialGradient
-      :id="id"
+      :id="useID"
       :gradientTransform="rotate ? `rotate(${rotate})` : transform"
       v-bind="restProps"
     >
@@ -14,7 +14,7 @@
 <script>
 export default {
   props: {
-    id: {
+    useID: {
       type: String,
       required: true
     },
