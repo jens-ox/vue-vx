@@ -11,7 +11,7 @@
     :fillOpacity="fillOpacity"
     :stroke="stroke"
     :strokeWidth="strokeWidth"
-    :strokeDasharray="strokeDasharray"
+    :stroke-dasharray="strokeDasharray"
     :strokeLinecap="strokeLinecap"
     :strokeLinejoin="strokeLinejoin"
     :strokeMiterlimit="strokeMiterlimit"
@@ -26,7 +26,6 @@ export default {
       type: String,
       default: ''
     },
-    data: Object,
     x: {
       type: Number,
       default: 0

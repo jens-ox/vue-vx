@@ -17,7 +17,6 @@
           :x="xScale(x(d))"
           :y="yMax - barHeight(d)"
           fill="rgba(23, 233, 217, .5)"
-          :data="{ x: x(d), y: y(d) }"
           @click="alert(`clicked: ${JSON.stringify(d)}`)"
         />
       </Group>

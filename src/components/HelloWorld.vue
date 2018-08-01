@@ -9,6 +9,8 @@
     <point-graph :width="width" :height="height"></point-graph>
     <br><br>
     <pattern-graph :width="width" :height="height"></pattern-graph>
+    <br><br>
+    <area-graph :width="width" :height="height" :margin="{ top: 0, bottom: 0, left: 0, right: 0 }"></area-graph>
   </div>
 </template>
 
@@ -17,6 +19,7 @@ import Graph from './Graph'
 import BarGraph from './BarGraph'
 import PointGraph from './PointGraph'
 import PatternGraph from './PatternGraph'
+import AreaGraph from './AreaGraph'
 
 export default {
   name: 'HelloWorld',
@@ -45,7 +48,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph
   }
 }
 </script>

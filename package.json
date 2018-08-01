@@ -16,7 +16,9 @@
     "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
     "@vue/cli-service": "^3.0.0-rc.10",
     "@vx/curve": "^0.0.165",
+    "@vx/event": "^0.0.165",
     "@vx/mock-data": "0.0.165",
+    "@vx/point": "^0.0.165",
     "@vx/scale": "0.0.165",
     "vue-template-compiler": "^2.5.16"
   },

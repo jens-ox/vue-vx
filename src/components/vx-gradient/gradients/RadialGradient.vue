@@ -6,8 +6,8 @@
       v-bind="restProps"
     >
       <slot />
-      <stop :offset="fromOffset" :stopColor="from" :stopOpacity="fromOpacity" v-if="!$slots.default" />
-      <stop :offset="toOffset" :stopColor="to" :stopOpacity="toOpacity" v-if="!$slots.default" />
+      <stop :offset="fromOffset" :stop-color="from" :stop-opacity="fromOpacity" v-if="!$slots.default" />
+      <stop :offset="toOffset" :stop-color="to" :stop-opacity="toOpacity" v-if="!$slots.default" />
     </radialGradient>
   </defs>
 </template>

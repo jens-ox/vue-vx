@@ -8,7 +8,7 @@
         :fill="fill"
         :stroke="stroke"
         :strokeWidth="strokeWidth"
-        :strokeDasharray="strokeDasharray"
+        :stroke-dasharray="strokeDasharray"
         v-bind="restProps"
       />
       <slot />

@@ -7,7 +7,7 @@
       :fill="fill"
       :stroke="stroke"
       :strokeWidth="strokeWidth"
-      :strokeDasharray="strokeDasharray"
+      :stroke-dasharray="strokeDasharray"
       :strokeLinecap="strokeLinecap"
       :shapeRendering="shapeRendering"
     />

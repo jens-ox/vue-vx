@@ -1,70 +1,63 @@
 <template>
   <g>
     <path
-      :class="`vx-linepath ${className}`"
+      :ref={innerRef}
+      :className="`vx-area-closed ${className}`"
       :d="path(data)"
       :stroke="stroke"
       :strokeWidth="strokeWidth"
       :stroke-dasharray="strokeDasharray"
-      :strokeDashoffset="strokeDashoffset"
       :fill="fill"
       v-bind="restProps"
     />
-    <g v-if="glyph" class="vx-linepath-glyphs">
-      {{ data.map(glyph) }}
-    </g>
   </g>
 </template>
 <script>
-import { line } from 'd3-shape'
-import { curveLinear } from '../../vx-curve'
+import { area } from 'd3-shape'
 
 export default {
   props: {
-    className: String,
+    x: Function,
+    y: Function,
+    y0: Function,
     xScale: Function,
     yScale: Function,
     data: Array,
-    x: Function,
-    y: Function,
     defined: {
       type: Function,
       default: () => true
     },
-    stroke: {
+    className: {
       type: String,
-      default: 'steelblue'
+      default: ''
     },
+    strokeDasharray: String,
     strokeWidth: {
       type: Number,
       default: 2
     },
-    strokeDasharray: {
+    stroke: {
       type: String,
-      default: ''
-    },
-    strokeDashoffset: {
-      type: Number,
-      default: 0
+      default: 'black'
     },
     fill: {
       type: String,
-      default: 'none'
+      default: 'rgba(0,0,0,0.3)'
     },
-    glyph: Function,
-    curve: {
-      type: Function,
-      default: curveLinear
-    },
+    curve: Function,
+    innerRef: Function,
     restProps: Object
   },
   methods: {
     path (data) {
-      const path = line()
+      let path = area()
         .x(d => this.xScale(this.x(d)))
-        .y(d => this.yScale(this.y(d)))
+        .y0(this.y0 || this.yScale.range()[0])
+        .y1(d => this.yScale(this.y(d)))
         .defined(this.defined)
-        .curve(this.curve)      
+      
+      if (this.curve) path.curve(this.curve)
+
       return path(data)
     }
   }

@@ -9,7 +9,7 @@
       :fill="fill"
       :stroke="stroke"
       :strokeWidth="strokeWidth"
-      :strokeDasharray="strokeDasharray"
+      :stroke-dasharray="strokeDasharray"
     />
     <circle v-if="complement" v-for="[cornerX, cornerY] in corners"
       v-bind:key="`${id}-complement-${cornerX}-${cornerY}`"
@@ -20,7 +20,7 @@
       :fill="fill"
       :stroke="stroke"
       :strokeWidth="strokeWidth"
-      :strokeDasharray="strokeDasharray"
+      :stroke-dasharray="strokeDasharray"
     ></circle>
   </AbstractPattern>
 </template>
