@@ -19,7 +19,7 @@
       <stacked-area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></stacked-area-graph>
     </div>
     <div class="graph-container">
-      <gradient-graph :width="width" :height="height"></gradient-graph>
+      <gradient-graph :width="width" :height="height" :margin="{ top: 0, bottom: 0, left: 0, right: 0 }"></gradient-graph>
     </div>
     <div class="graph-container">
       <glyph-graph :width="width" :height="height"></glyph-graph>
@@ -29,6 +29,9 @@
     </div>
     <div class="graph-container">
       <bar-group-graph :width="width" :height="height"></bar-group-graph>
+    </div>
+    <div class="graph-container">
+      <heatmap-graph :width="width" :height="height"></heatmap-graph>
     </div>
   </div>
 </template>
@@ -44,6 +47,7 @@ import GradientGraph from './GradientGraph'
 import GlyphGraph from './GlyphGraph'
 import AxisGraph from './AxisGraph'
 import BarGroupGraph from './BarGroupGraph'
+import HeatmapGraph from './HeatmapGraph'
 
 export default {
   name: 'HelloWorld',
@@ -72,7 +76,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph
   }
 }
 </script>

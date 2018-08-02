@@ -69,7 +69,7 @@ export default {
 
     // bounds
     xMax () { return this.width - this.margin.left - this.margin.right },
-    yMax () { return this.height - this.margin.top - this.margin.bottom - 100 },
+    yMax () { return this.height - this.margin.top - this.margin.bottom - 50 },
 
     // scales
     x0Scale () {
