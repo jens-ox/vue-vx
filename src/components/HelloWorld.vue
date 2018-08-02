@@ -1,26 +1,35 @@
 <template>
-  <div>
-    <graph :width="width" :height="height"></graph>
-    <br>
-    <br>
-    <bar-graph :width="width" :height="height"></bar-graph>
-    <br>
-    <br>
-    <point-graph :width="width" :height="height"></point-graph>
-    <br><br>
-    <pattern-graph :width="width" :height="height"></pattern-graph>
-    <br><br>
-    <area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></area-graph>
-    <br><br>
-    <stacked-area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></stacked-area-graph>
-    <br><br>
-    <gradient-graph :width="width" :height="height"></gradient-graph>
-    <br><br>
-    <glyph-graph :width="width" :height="height"></glyph-graph>
-    <br><br>
-    <axis-graph :width="width" :height="height"></axis-graph>
-    <br><br>
-    <bar-group-graph :width="width" :height="height"></bar-group-graph>
+  <div class="graph-grid">
+    <div class="graph-container">
+      <graph :width="width" :height="height"></graph>
+    </div>
+    <div class="graph-container">
+      <bar-graph :width="width" :height="height"></bar-graph>
+    </div>
+    <div class="graph-container">
+      <point-graph :width="width" :height="height"></point-graph>
+    </div>
+    <div class="graph-container">
+      <pattern-graph :width="width" :height="height"></pattern-graph>
+    </div>
+    <div class="graph-container">
+      <area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></area-graph>
+    </div>
+    <div class="graph-container">
+      <stacked-area-graph :width="width" :height="height" :margin="{ top: 10, bottom: 10, left: 0, right: 0 }"></stacked-area-graph>
+    </div>
+    <div class="graph-container">
+      <gradient-graph :width="width" :height="height"></gradient-graph>
+    </div>
+    <div class="graph-container">
+      <glyph-graph :width="width" :height="height"></glyph-graph>
+    </div>
+    <div class="graph-container">
+      <axis-graph :width="width" :height="height"></axis-graph>
+    </div>
+    <div class="graph-container">
+      <bar-group-graph :width="width" :height="height"></bar-group-graph>
+    </div>
   </div>
 </template>
 
@@ -67,3 +76,14 @@ export default {
   }
 }
 </script>
+<style scoped>
+.graph-container {
+  display: inline-block;
+}
+.graph-grid {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+}
+</style>
+
