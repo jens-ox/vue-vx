@@ -91,6 +91,22 @@
         :scale="xScale"
         :numTicks="numTicksForWidth(width)"
         label="Time"
+        :labelProps="{
+          'fill': '#8e205f',
+          'text-anchor': 'middle',
+          'font-size': 12,
+          'font-family': 'Arial'
+        }"
+        stroke="#1b1a1e"
+        tickStroke="#8e205f"
+        :tickLabelProps="(value, index) => ({
+          'fill': '#8e205f',
+          'text-anchor': 'middle',
+          'font-size': 10,
+          'font-family': 'Arial',
+          'dx': '0.25em',
+          'dy': '0.25em'
+        })"
       >
       </AxisBottom>
     </Group>
@@ -119,9 +135,6 @@ export default {
   data () {
     return {
       curveBasis,
-      tickLabelSize: 10,
-      tickRotate: 45,
-      tickColor: '#8e205f',
       data: []
     }
   },

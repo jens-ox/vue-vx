@@ -38,7 +38,11 @@ export default {
     }
   },
   props: {
-    ...Axis.props
+    ...Axis.props,
+    labelOffset: {
+      type: Number,
+      default: 36
+    }
   },
   components: {
     Axis

@@ -29,14 +29,7 @@
     <text
       v-if="label"
       :class="`vx-axis-label ${labelClassName}`"
-      v-bind="getLabelTransform({
-        labelOffset,
-        labelProps,
-        orientation,
-        range,
-        tickLabelFontSize,
-        tickLength
-      })"
+      v-bind="labelTransform"
     >
       {{ label }}
     </text>
@@ -47,15 +40,9 @@ import { LineShape } from '../../vx-shape'
 import { Point } from '../../vx-point'
 import { Group } from '../../vx-group'
 import center from '../utils/center'
-import getLabelTransform from '../utils/labelTransform'
 import ORIENT from '../constants/orientation'
 
 export default {
-  data () {
-    return {
-      getLabelTransform
-    }
-  },
   props: {
     axisClassName: String,
     axisLineClassName: String,
@@ -75,7 +62,10 @@ export default {
       type: String,
       default: ''
     },
-    labelClassName: String,
+    labelClassName: {
+      type: String,
+      default: ''
+    },
     labelOffset: {
       type: Number,
       default: 14
@@ -183,6 +173,21 @@ export default {
         x: this.horizontal ? this.range1 : 0,
         y: this.horizontal ? 0 : this.range1
       })
+    },
+    labelTransform () {
+      const sign = this.orientation === ORIENT.left || this.orientation === ORIENT.top ? -1 : 1
+
+      let x, y, transform = null
+      if (this.orientation === ORIENT.top || this.orientation === ORIENT.bottom) {
+        x = Math.max(...this.range) / 2
+        y = sign * (this.tickLength + this.labelOffset + this.tickLabelFontSize + (this.orientation === ORIENT.bottom ? this.labelProps['font-size'] : 0))
+      } else {
+        x = sign * (Math.max(...this.range) / 2)
+        y = -(this.tickLength + this.labelOffset)
+        transform = `rotate(${sign * 90})`
+      }
+
+      return { x, y, transform, ...this.labelProps }
     }
   },
   methods: {

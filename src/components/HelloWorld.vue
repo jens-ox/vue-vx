@@ -25,7 +25,7 @@
       <glyph-graph :width="width" :height="height"></glyph-graph>
     </div>
     <div class="graph-container">
-      <axis-graph :width="width" :height="height"></axis-graph>
+      <axis-graph :width="width" :height="height" :margin="{ top: 20, bottom: 80, left: 80, right: 80 }"></axis-graph>
     </div>
     <div class="graph-container">
       <bar-group-graph :width="width" :height="height"></bar-group-graph>
