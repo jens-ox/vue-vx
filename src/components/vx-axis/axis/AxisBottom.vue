@@ -20,11 +20,15 @@
     :strokeDasharray="strokeDasharray"
     :tickClassName="tickClassName"
     :tickFormat="tickFormat"
-    :tickLabelProps="bottomTickLabelProps"
+    :tickLabelProps="Object.assign({}, {
+      'dx': '0',
+      'dy': '0.25em',
+    }, tickLabelProps)"
     :tickLength="tickLength"
     :tickStroke="tickStroke"
     :tickTransform="tickTransform"
     :tickValues="tickValues"
+    :tickRotate="tickRotate"
     :top="top"
   />
 </template>
@@ -40,17 +44,6 @@ export default {
   },
   props: {
     ...Axis.props
-  },
-  computed: {
-    bottomTickLabelProps () {
-      return (value, index) => {
-        return {
-          ...this.tickLabelProps(value, index),
-          'dx': '0',
-          'dy': '0.25em'
-        }
-      }
-    }
   },
   components: {
     Axis

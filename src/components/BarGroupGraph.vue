@@ -29,12 +29,10 @@
       stroke='#e5fd3d'
       tickStroke='#e5fd3d'
       hideAxisLine
-      :tickLabelProps="() => {
-        return {
-          'fill': '#e5fd3d',
-          'font-size': 11,
-          'text-anchor': 'middle'
-        }
+      :tickLabelProps="{
+        'fill': '#e5fd3d',
+        'font-size': 11,
+        'text-anchor': 'middle'
       }"
     />
   </svg>

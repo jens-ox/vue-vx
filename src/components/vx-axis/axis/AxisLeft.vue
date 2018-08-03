@@ -20,11 +20,16 @@
     :strokeDasharray="strokeDasharray"
     :tickClassName="tickClassName"
     :tickFormat="tickFormat"
-    :tickLabelProps="leftTickLabelProps"
+    :tickLabelProps="Object.assign({}, {
+      'text-anchor': 'end',
+      'dx': '-0.25em',
+      'dy': '0.25em'
+    }, tickLabelProps)"
     :tickLength="tickLength"
     :tickStroke="tickStroke"
     :tickTransform="tickTransform"
     :tickValues="tickValues"
+    :tickRotate="tickRotate"
     :top="top"
   />
 </template>
@@ -43,18 +48,6 @@ export default {
     labelOffset: {
       type: Number,
       default: 36
-    }
-  },
-  computed: {
-    leftTickLabelProps () {
-      return (value, index) => {
-        return {
-          ...this.tickLabelProps(value, index),
-          'text-anchor': 'end',
-          'dx': '-0.25em',
-          'dy': '0.25em'
-        }
-      }
     }
   },
   components: {

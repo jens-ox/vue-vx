@@ -41,6 +41,7 @@
         :scale="yScale"
         hideZero
         :numTicks="numTicksForHeight(height)"
+        :labelOffset="40"
         label="Axis Left Label"
       />
       <AxisRight
@@ -49,12 +50,19 @@
         :scale="yScale"
         hideZero
         :numTicks="numTicksForHeight(height)"
+        :labelOffset="40"
         label="Axis Right Label"
       />
       <AxisBottom
         :top="height - margin.bottom"
         :scale="xScale"
         :numTicks="numTicksForWidth(width)"
+        :tickRotate="45"
+        :tickLabelProps="{
+          'dx': '0.75em',
+          'dy': '0.25em'
+        }"
+        :labelOffset="25"
         label="Time"
       >
       </AxisBottom>

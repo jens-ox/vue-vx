@@ -12,9 +12,8 @@
 
       <LineShape v-if="!hideTicks" :from="tickFromPoint(val)" :to="tickToPoint(val)" :stroke="tickStroke" />
       <text
-        :x="tickToPoint(val).x"
-        :y="tickToPoint(val).y + (horizontal && !isTop ? computedTickLabelFontSize(val, index) : 0)"
-        v-bind="tickLabelProps(val, index)"
+        :transform="tickLabelTransform(val)"
+        v-bind="computedTickLabelProps"
       >{{ format(val, index) }}</text>
     </Group>
 
@@ -82,14 +81,7 @@ export default {
     },
     labelProps: {
       type: Object,
-      default: () => {
-        return {
-          'text-anchor': 'middle',
-          'font-family': 'Arial',
-          'font-size': '12px',
-          'fill': 'black'
-        }
-      }
+      default: () => {}
     },
     left: {
       type: Number,
@@ -126,15 +118,8 @@ export default {
     },
     tickFormat: Function,
     tickLabelProps: {
-      type: Function,
-      default: () => {
-        return {
-          'text-anchor': 'middle',
-          'font-family': 'Arial',
-          'font-size': '10px',
-          'fill': 'black'
-        }
-      }
+      type: Object,
+      default: () => {}
     },
     tickLabelFontSize: {
       type: Number,
@@ -151,6 +136,10 @@ export default {
     tickTransform: {
       type: String,
       default: ''
+    },
+    tickRotate: {
+      type: Number,
+      default: 0
     },
     tickValues: Array,
     top: {
@@ -188,19 +177,36 @@ export default {
       })
     },
     labelTransform () {
+      const computedProps = {
+        'text-anchor': 'middle',
+        'font-family': 'Arial',
+        'font-size': 12,
+        'fill': 'black',
+        ...this.labelProps
+      }
       const sign = this.orientation === ORIENT.left || this.orientation === ORIENT.top ? -1 : 1
 
       let x, y, transform = null
       if (this.orientation === ORIENT.top || this.orientation === ORIENT.bottom) {
         x = Math.max(...this.range) / 2
-        y = sign * (this.tickLength + this.labelOffset + this.tickLabelFontSize + (this.orientation === ORIENT.bottom ? this.labelProps['font-size'] : 0))
+        y = sign * (this.tickLength + this.labelOffset + this.tickLabelFontSize + (this.orientation === ORIENT.bottom ? computedProps['font-size'] : 0))
       } else {
         x = sign * (Math.max(...this.range) / 2)
         y = -(this.tickLength + this.labelOffset)
         transform = `rotate(${sign * 90})`
       }
 
-      return { x, y, transform, ...this.labelProps }
+      return { x, y, transform, ...computedProps }
+    },
+    computedTickLabelFontSize () { return Math.max(this.tickLabelFontSize, this.computedTickLabelProps['font-size'] || 0) },
+    computedTickLabelProps () {
+      return {
+        'text-anchor': 'middle',
+        'font-family': 'Arial',
+        'font-size': 10,
+        'fill': 'black',
+        ...this.tickLabelProps
+      }
     }
   },
   methods: {
@@ -216,7 +222,15 @@ export default {
         y: this.horizontal ? this.tickLength * this.tickSign : this.position(val)
       })
     },
-    computedTickLabelFontSize (val, index) { return Math.max(this.tickLabelFontSize, this.tickLabelProps(val, index).fontSize || 0) }
+    tickLabelX (val) {
+      return this.tickToPoint(val).x
+    },
+    tickLabelY (val) {
+      return this.tickToPoint(val).y + (this.horizontal && !this.isTop ? this.computedTickLabelFontSize : 0)
+    },
+    tickLabelTransform (val) {
+      return `translate(${this.tickLabelX(val)}, ${this.tickLabelY(val)}), rotate(${this.tickRotate})`
+    }
   },
   components: {
     LineShape, Group
