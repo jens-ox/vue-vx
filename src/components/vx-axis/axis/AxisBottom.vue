@@ -1,6 +1,8 @@
 <template>
   <Axis
     :axisClassName="`vx-axis-bottom ${axisClassName}`"
+    :orientation="ORIENT.bottom"
+
     :axisLineClassName="axisLineClassName"
     :hideAxisLine="hideAxisLine"
     :hideTicks="hideTicks"
@@ -11,7 +13,6 @@
     :labelProps="labelProps"
     :left="left"
     :numTicks="numTicks"
-    :orientation="ORIENT.bottom"
     :rangePadding="rangePadding"
     :scale="scale"
     :stroke="stroke"
@@ -19,7 +20,7 @@
     :strokeDasharray="strokeDasharray"
     :tickClassName="tickClassName"
     :tickFormat="tickFormat"
-    :tickLabelProps="tickLabelProps"
+    :tickLabelProps="bottomTickLabelProps"
     :tickLength="tickLength"
     :tickStroke="tickStroke"
     :tickTransform="tickTransform"
@@ -39,6 +40,17 @@ export default {
   },
   props: {
     ...Axis.props
+  },
+  computed: {
+    bottomTickLabelProps () {
+      return (value, index) => {
+        return {
+          ...this.tickLabelProps(value, index),
+          'dx': '0',
+          'dy': '0.25em'
+        }
+      }
+    }
   },
   components: {
     Axis

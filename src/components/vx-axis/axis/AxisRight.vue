@@ -1,6 +1,8 @@
 <template>
   <Axis
     :axisClassName="`vx-axis-right ${axisClassName}`"
+    :orientation="ORIENT.right"
+
     :axisLineClassName="axisLineClassName"
     :hideAxisLine="hideAxisLine"
     :hideTicks="hideTicks"
@@ -11,7 +13,6 @@
     :labelProps="labelProps"
     :left="left"
     :numTicks="numTicks"
-    :orientation="ORIENT.right"
     :rangePadding="rangePadding"
     :scale="scale"
     :stroke="stroke"
@@ -19,7 +20,7 @@
     :strokeDasharray="strokeDasharray"
     :tickClassName="tickClassName"
     :tickFormat="tickFormat"
-    :tickLabelProps="tickLabelProps"
+    :tickLabelProps="rightTickLabelProps"
     :tickLength="tickLength"
     :tickStroke="tickStroke"
     :tickTransform="tickTransform"
@@ -42,6 +43,18 @@ export default {
     labelOffset: {
       type: Number,
       default: 36
+    }
+  },
+  computed: {
+    rightTickLabelProps () {
+      return (value, index) => {
+        return {
+          ...this.tickLabelProps(value, index),
+          'text-anchor': 'start',
+          'dx': '0.25em',
+          'dy': '0.25em'
+        }
+      }
     }
   },
   components: {
