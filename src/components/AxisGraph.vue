@@ -1,14 +1,13 @@
 <template>
   <svg :width="width" :height="height" v-if="width >= 10">
     <GradientOrangeRed useID="linear" :vertical="false" :fromOpacity="0.8" :toOpacity="0.3" />
-    <rect :x="0" :y="0" :width="width" :height="height" fill="#f4419f" :rx="14" />
+    <rect :x="0" :y="0" :width="width" :height="height" fill="transparent" stroke="black" stroke-width="2" :rx="14" />
     <Grid
       :top="margin.top"
       :left="margin.left"
       :xScale="xScale"
       :yScale="yScale"
-      stroke="rgba(142, 32, 95, 0.9)"
-      :width="xMax"
+      :width="xMax" 
       :height="yMax"
       :numTicksRows="numTicksForHeight(height)"
       :numTicksColumns="numTicksForWidth(width)"
@@ -39,27 +38,10 @@
     <Group :left="margin.left">
       <AxisLeft
         :top="margin.top"
-        :left="0"
         :scale="yScale"
         hideZero
         :numTicks="numTicksForHeight(height)"
         label="Axis Left Label"
-        :labelProps="{
-          'fill': '#8e205f',
-          'text-anchor': 'middle',
-          'font-size': 12,
-          'font-family': 'Arial'
-        }"
-        stroke="#1b1a1e"
-        tickStroke="#8e205f"
-        :tickLabelProps="(value, index) => ({
-          'fill': '#8e205f',
-          'text-anchor': 'end',
-          'font-size': 10,
-          'font-family': 'Arial',
-          'dx': '-0.25em',
-          'dy': '0.25em'
-        })"
       />
       <AxisRight
         :top="margin.top"
@@ -68,45 +50,12 @@
         hideZero
         :numTicks="numTicksForHeight(height)"
         label="Axis Right Label"
-        :labelProps="{
-          'fill': '#8e205f',
-          'text-anchor': 'middle',
-          'font-size': 12,
-          'font-family': 'Arial'
-        }"
-        stroke="#1b1a1e"
-        tickStroke="#8e205f"
-        :tickLabelProps="(value, index) => ({
-          fill: '#8e205f',
-          'text-anchor': 'start',
-          'font-size': 10,
-          'font-family': 'Arial',
-          'dx': '0.25em',
-          'dy': '0.25em'
-        })"
       />
       <AxisBottom
         :top="height - margin.bottom"
-        :left="0"
         :scale="xScale"
         :numTicks="numTicksForWidth(width)"
         label="Time"
-        :labelProps="{
-          'fill': '#8e205f',
-          'text-anchor': 'middle',
-          'font-size': 12,
-          'font-family': 'Arial'
-        }"
-        stroke="#1b1a1e"
-        tickStroke="#8e205f"
-        :tickLabelProps="(value, index) => ({
-          'fill': '#8e205f',
-          'text-anchor': 'middle',
-          'font-size': 10,
-          'font-family': 'Arial',
-          'dx': '0.25em',
-          'dy': '0.25em'
-        })"
       >
       </AxisBottom>
     </Group>
@@ -157,20 +106,8 @@ export default {
         nice: true
       })
     },
-
-    // scale tick formats
-    xFormat () {
-      return this.xScale.tickFormat ? this.xScale.tickFormat() : d => d
-    },
-    yFormat () {
-      return this.yScale.tickFormat ? this.yScale.tickFormat() : d => d
-    }
   },
   methods: {
-    axisCenter (props) {
-      return (props.axisToPoint.x - props.axisFromPoint.x) / 2
-    },
-
     // accessors
     x (d) { return d.date },
     y (d) { return d.value },
