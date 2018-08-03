@@ -1,5 +1,7 @@
 <template>
   <Group :className="`vx-axis ${axisClassName}`" :top="top" :left="left">
+
+    <!-- ticks -->
     <Group
       v-for="(val, index) in values"
       v-if="!hideZero || val > 0"
@@ -16,6 +18,7 @@
       >{{ format(val, index) }}</text>
     </Group>
 
+    <!-- axis line -->
     <LineShape
       v-if="!hideAxisLine"
       :className="`vx-axis-line ${axisLineClassName}`"
@@ -26,6 +29,7 @@
       :strokeDasharray="strokeDasharray"
     />
 
+    <!-- axis label -->
     <text
       v-if="label"
       :class="`vx-axis-label ${labelClassName}`"
@@ -44,8 +48,14 @@ import ORIENT from '../constants/orientation'
 
 export default {
   props: {
-    axisClassName: String,
-    axisLineClassName: String,
+    axisClassName: {
+      type: String,
+      default: ''
+    },
+    axisLineClassName: {
+      type: String,
+      default: ''
+    },
     hideAxisLine: {
       type: Boolean,
       default: false
@@ -76,7 +86,7 @@ export default {
         return {
           'text-anchor': 'middle',
           'font-family': 'Arial',
-          'font-size': 10,
+          'font-size': '12px',
           'fill': 'black'
         }
       }
@@ -121,7 +131,7 @@ export default {
         return {
           'text-anchor': 'middle',
           'font-family': 'Arial',
-          'font-size': 10,
+          'font-size': '10px',
           'fill': 'black'
         }
       }
@@ -138,7 +148,10 @@ export default {
       type: String,
       default: 'black'
     },
-    tickTransform: String,
+    tickTransform: {
+      type: String,
+      default: ''
+    },
     tickValues: Array,
     top: {
       type: Number,
