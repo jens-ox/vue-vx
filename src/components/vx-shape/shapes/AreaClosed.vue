@@ -15,6 +15,7 @@
 </template>
 <script>
 import { area } from 'd3-shape'
+import { curveLinear } from '../../vx-curve'
 
 export default {
   props: {
@@ -53,7 +54,10 @@ export default {
       type: String,
       default: 'rgba(0,0,0,0.3)'
     },
-    curve: Function,
+    curve: {
+      type: Function,
+      default: curveLinear
+    },
     innerRef: Function,
     restProps: Object
   },
