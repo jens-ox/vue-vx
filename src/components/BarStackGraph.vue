@@ -24,7 +24,7 @@
         :yScale="yScale"
         :zScale="zScale"
         v-on:move="mouseMoveHandler"
-        v-on:leave="mouseLeaveHandler"
+        v-on:mouseleave.native="mouseLeaveHandler"
       />
       <AxisBottom
         :scale="xScale"
