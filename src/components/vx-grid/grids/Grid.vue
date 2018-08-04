@@ -6,6 +6,7 @@
       :width="width"
       :stroke="stroke"
       :stroke-width="strokeWidth"
+      :stroke-opacity="strokeOpacity"
       :stroke-dasharray="strokeDasharray"
       :numTicks="numTicksRows"
       :style="rowLineStyle"
@@ -18,6 +19,7 @@
       :height="height"
       :stroke="stroke"
       :stroke-width="strokeWidth"
+      :stroke-opacity="strokeOpacity"
       :stroke-dasharray="strokeDasharray"
       :numTicks="numTicksColumns"
       :style="columnLineStyle"
@@ -50,7 +52,14 @@ export default {
       default: ''
     },
     stroke: String,
-    strokeWidth: Number,
+    strokeWidth: {
+      type: Number,
+      default: 1
+    },
+    strokeOpacity: {
+      type: Number,
+      default: 1
+    },
     strokeDasharray: String,
     numTicksRows: Number,
     numTicksColumns: Number,

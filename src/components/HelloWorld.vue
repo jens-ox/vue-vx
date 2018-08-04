@@ -33,6 +33,9 @@
     <div class="graph-container">
       <heatmap-graph :width="width" :height="height"></heatmap-graph>
     </div>
+    <div class="graph-container">
+      <bar-stack-graph :width="width" :height="height" :margin="{ top: 50, bottom: 100, left: 0, right: 0 }"></bar-stack-graph>
+    </div>
   </div>
 </template>
 
@@ -48,6 +51,7 @@ import GlyphGraph from './GlyphGraph'
 import AxisGraph from './AxisGraph'
 import BarGroupGraph from './BarGroupGraph'
 import HeatmapGraph from './HeatmapGraph'
+import BarStackGraph from './BarStackGraph'
 
 export default {
   name: 'HelloWorld',
@@ -76,7 +80,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph
   }
 }
 </script>
