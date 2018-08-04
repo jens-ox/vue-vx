@@ -36,6 +36,9 @@
     <div class="graph-container">
       <bar-stack-graph :width="width" :height="height" :margin="{ top: 50, bottom: 100, left: 0, right: 0 }"></bar-stack-graph>
     </div>
+    <div class="graph-container">
+      <radial-graph :width="width" :height="height"></radial-graph>
+    </div>
   </div>
 </template>
 
@@ -52,6 +55,7 @@ import AxisGraph from './AxisGraph'
 import BarGroupGraph from './BarGroupGraph'
 import HeatmapGraph from './HeatmapGraph'
 import BarStackGraph from './BarStackGraph'
+import RadialGraph from './RadialGraph'
 
 export default {
   name: 'HelloWorld',
@@ -80,7 +84,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph
   }
 }
 </script>
