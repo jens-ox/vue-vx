@@ -30,7 +30,7 @@
           xFormatted: format(x(d.data)),
           data: d.data
         }"
-        v-on:mousemove.native="movementHandler(ii, i, s.key, d[1], d.data, $event)"
+        v-on:mousemove.native="movementHandler(s.key, d[1], d.data, $event)"
         v-bind="restProps"
       />
     </Group>
@@ -86,12 +86,11 @@ export default {
   },
   methods: {
     barHeight (d) { return this.yScale(d[0]) - this.yScale(d[1]) },
-    movementHandler (x, y, key, value, data, $event) {
+    movementHandler (key, value, data, $event) {
       if (this.$listeners && this.$listeners.move) {
         this.$emit('move', {
-          x, y,
-          clientX: $event.clientX,
-          clientY: $event.clientY,
+          clientX: $event.layerX,
+          clientY: $event.layerY,
           data: {
             ...data, key, value
           }
