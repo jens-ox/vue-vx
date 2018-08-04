@@ -36,9 +36,7 @@ export default {
     },
     size: {
       type: Function,
-      default: (label) => {
-        console.log(label)
-      },
+      default: () => {},
     },
     shape: {
       type: String,
