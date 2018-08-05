@@ -19,7 +19,6 @@ yarn run serve
 
 ## Next steps
 
-- [ ] port vx/text
-- [ ] fix vx/axis
-- [ ] port remaining charts
+- [ ] port remaining graphs
+- [ ] use mixins for commonly used properties
 - [ ] bundle as library
