@@ -7,6 +7,7 @@ export { default as BarGroup } from './shapes/BarGroup'
 export { default as BarStack } from './shapes/BarStack'
 export { default as LineRadial } from './shapes/LineRadial'
 export { default as Pie } from './shapes/Pie'
+export { default as Arc } from './shapes/Arc'
 
 export { default as LinkHorizontal } from './shapes/link/diagonal/LinkHorizontal'
 export { default as LinkVertical } from './shapes/link/diagonal/LinkVertical'
