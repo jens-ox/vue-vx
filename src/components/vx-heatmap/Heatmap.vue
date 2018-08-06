@@ -18,7 +18,7 @@
         @click="clickHandler(d)"
         @mouseover="mouseoverHandler($event)"
         @mouseout="mouseoutHandler($event)"
-        v-bind="customProps(symbolType, b, j)"
+        v-bind="customProps(symbolType, j)"
       />
     </Group>
   </Group>
@@ -80,7 +80,7 @@ export default {
     yBinComputed () { return this.yBin || function (d) { return d } }
   },
   methods: {
-    customProps (symbolType, b = 0, j = 0) {
+    customProps (symbolType, j = 0) {
       switch (symbolType) {
         case 'circle':
           return {
