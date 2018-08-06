@@ -9,3 +9,4 @@ export { default as LineRadial } from './shapes/LineRadial'
 export { default as Pie } from './shapes/Pie'
 
 export { default as LinkHorizontal } from './shapes/link/diagonal/LinkHorizontal'
+export { default as LinkVertical } from './shapes/link/diagonal/LinkVertical'

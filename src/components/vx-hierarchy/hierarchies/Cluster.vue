@@ -14,11 +14,11 @@
   >
     <!-- links -->
     <Group
-      v-if="$slots.link"
+      v-if="$scopedSlots.link"
       v-for="(link, i) in data.links()"
       :key="`cluster-link-${i}`"
     >
-      <slot name="link" slot-scope="link" />
+      <slot name="link" :scope="{ link }" />
     </Group>
     <Group v-else
       v-for="(link, i) in data.links()"
@@ -29,11 +29,11 @@
 
     <!-- nodes -->
     <Group
-      v-if="$slots.node"
+      v-if="$scopedSlots.node"
       v-for="(node, i) in data.descendants()"
       :key="`cluster-node-${i}`"
     >
-      <slot name="node" slot-scope="node"></slot>
+      <slot name="node" :scope="{ node }"></slot>
     </Group>
     <Group v-else
       v-for="(node, i) in data.descendants()"
@@ -61,7 +61,7 @@ export default {
       type: String,
       default: ''
     },
-    size: Number,
+    size: Array,
     nodeSize: Number,
     separation: Number
   },
