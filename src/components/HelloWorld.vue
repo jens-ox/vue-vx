@@ -54,6 +54,9 @@
     <div class="graph-container">
       <chord-graph :width="width" :height="height" :margin="{ top: 50, bottom: 50, left: 50, right: 50 }"></chord-graph>
     </div>
+    <div class="graph-container">
+      <bar-group-horizontal-graph :width="width" :height="height"></bar-group-horizontal-graph>
+    </div>
   </div>
 </template>
 
@@ -76,6 +79,7 @@ import TreeGraph from './TreeGraph'
 import DendrogramGraph from './DendrogramGraph'
 import VoronoiGraph from './VoronoiGraph'
 import ChordGraph from './ChordGraph'
+import BarGroupHorizontalGraph from './BarGroupHorizontalGraph'
 
 export default {
   name: 'HelloWorld',
@@ -104,7 +108,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph, PieGraph, TreeGraph, DendrogramGraph, VoronoiGraph, ChordGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph, PieGraph, TreeGraph, DendrogramGraph, VoronoiGraph, ChordGraph, BarGroupHorizontalGraph
   }
 }
 </script>

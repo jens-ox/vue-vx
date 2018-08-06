@@ -52,7 +52,7 @@ export default {
     height: Number,
     margin: {
       type: Object,
-      default: () => { return { top: 10, bottom: 10, left: 10, right: 10 } }
+      default: () => { return { top: 30, bottom: 50, left: 10, right: 10 } }
     }
   },
   data () {
@@ -67,7 +67,7 @@ export default {
 
     // bounds
     xMax () { return this.width - this.margin.left - this.margin.right },
-    yMax () { return this.height - this.margin.top - this.margin.bottom - 50 },
+    yMax () { return this.height - this.margin.top - this.margin.bottom },
 
     // scales
     x0Scale () {
