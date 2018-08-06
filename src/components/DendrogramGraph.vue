@@ -106,6 +106,11 @@ export default {
       }
     }
   },
+  methods: {
+    nodeClickHandler (node) {
+      console.log(JSON.stringify(node.data.name))
+    },
+  },
   beforeMount () {
     this.data = hierarchy(this.raw)
   },
