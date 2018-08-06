@@ -48,6 +48,9 @@
     <div class="graph-container">
       <dendrogram-graph :width="width" :height="height" :margin="{ top: 50, bottom: 50, left: 50, right: 50 }"></dendrogram-graph>
     </div>
+    <div class="graph-container">
+      <voronoi-graph :width="width" :height="height"></voronoi-graph>
+    </div>
   </div>
 </template>
 
@@ -68,6 +71,7 @@ import RadialGraph from './RadialGraph'
 import PieGraph from './PieGraph'
 import TreeGraph from './TreeGraph'
 import DendrogramGraph from './DendrogramGraph'
+import VoronoiGraph from './VoronoiGraph'
 
 export default {
   name: 'HelloWorld',
@@ -96,7 +100,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph, PieGraph, TreeGraph, DendrogramGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph, PieGraph, TreeGraph, DendrogramGraph, VoronoiGraph
   }
 }
 </script>
