@@ -42,6 +42,9 @@
     <div class="graph-container">
       <pie-graph :width="width" :height="height"></pie-graph>
     </div>
+    <div class="graph-container">
+      <tree-graph :width="width" :height="height" :margin="{ top: 50, bottom: 50, left: 50, right: 50 }"></tree-graph>
+    </div>
   </div>
 </template>
 
@@ -60,6 +63,7 @@ import HeatmapGraph from './HeatmapGraph'
 import BarStackGraph from './BarStackGraph'
 import RadialGraph from './RadialGraph'
 import PieGraph from './PieGraph'
+import TreeGraph from './TreeGraph'
 
 export default {
   name: 'HelloWorld',
@@ -88,7 +92,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph, PieGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph, PieGraph, TreeGraph
   }
 }
 </script>
