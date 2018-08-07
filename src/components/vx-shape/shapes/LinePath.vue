@@ -3,12 +3,7 @@
     <path
       :class="`vx-linepath ${className}`"
       :d="path(data)"
-      :stroke="stroke"
-      :stroke-width="strokeWidth"
-      :stroke-dasharray="strokeDasharray"
-      :stroke-dashoffset="strokeDashoffset"
-      :fill="fill"
-      v-bind="restProps"
+      :style="pathStyle"
     />
     <g class="vx-linepath-glyphs">
       <slot />
@@ -21,7 +16,10 @@ import { curveLinear } from '../../vx-curve'
 
 export default {
   props: {
-    className: String,
+    className: {
+      type: String,
+      default: ''
+    },
     xScale: Function,
     yScale: Function,
     data: Array,
@@ -31,31 +29,14 @@ export default {
       type: Function,
       default: () => true
     },
-    stroke: {
-      type: String,
-      default: 'steelblue'
-    },
-    strokeWidth: {
-      type: Number,
-      default: 2
-    },
-    strokeDasharray: {
-      type: String,
-      default: ''
-    },
-    strokeDashoffset: {
-      type: Number,
-      default: 0
-    },
-    fill: {
-      type: String,
-      default: 'none'
+    pathStyle: {
+      type: Object,
+      default: () => {}
     },
     curve: {
       type: Function,
       default: curveLinear
-    },
-    restProps: Object
+    }
   },
   methods: {
     path (data) {

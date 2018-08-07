@@ -20,8 +20,10 @@
         :yScale="yScale"
         :x="x"
         :y="y"
-        stroke="#ffffff"
-        :stroke-width="1"
+        :pathStyle="{
+          stroke: '#ffffff',
+          strokeWidth: 1
+        }"
         :curve="curve(i)"
       />
     </Group>

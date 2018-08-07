@@ -116,7 +116,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 .graph-container {
   display: inline-block;
 }
@@ -124,6 +124,15 @@ export default {
   display: grid;
   grid-gap: 1em;
   grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+}
+
+/* default stylings for vx elements */
+.vx-linepath {
+  stroke: steelblue;
+  stroke-width: 2;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  fill: none;
 }
 </style>
 
