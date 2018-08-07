@@ -57,6 +57,9 @@
     <div class="graph-container">
       <bar-group-horizontal-graph :width="width" :height="height"></bar-group-horizontal-graph>
     </div>
+    <div class="graph-container">
+      <threshold-graph :width="width" :height="height"></threshold-graph>
+    </div>
   </div>
 </template>
 
@@ -80,6 +83,7 @@ import DendrogramGraph from './DendrogramGraph'
 import VoronoiGraph from './VoronoiGraph'
 import ChordGraph from './ChordGraph'
 import BarGroupHorizontalGraph from './BarGroupHorizontalGraph'
+import ThresholdGraph from './ThresholdGraph'
 
 export default {
   name: 'HelloWorld',
@@ -108,7 +112,7 @@ export default {
     }
   },
   components: {
-    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph, PieGraph, TreeGraph, DendrogramGraph, VoronoiGraph, ChordGraph, BarGroupHorizontalGraph
+    Graph, BarGraph, PointGraph, PatternGraph, AreaGraph, StackedAreaGraph, GradientGraph, GlyphGraph, BarGroupGraph, AxisGraph, HeatmapGraph, BarStackGraph, RadialGraph, PieGraph, TreeGraph, DendrogramGraph, VoronoiGraph, ChordGraph, BarGroupHorizontalGraph, ThresholdGraph
   }
 }
 </script>
