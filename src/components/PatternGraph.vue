@@ -132,13 +132,13 @@
   </svg>
 </template>
 <script>
-import { Bar } from './vx-shape'
-import { Group } from './vx-group'
+import { Bar } from '../../packages/vx-shape'
+import { Group } from '../../packages/vx-group'
 import {
   PatternLines,
   PatternCircles,
   PatternWaves
-} from './vx-pattern'
+} from '../../packages/vx-pattern'
 
 export default {
   props: {

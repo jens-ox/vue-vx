@@ -24,12 +24,12 @@
   </svg>
 </template>
 <script>
-import { Bar } from './vx-shape'
-import { Group } from './vx-group'
-import { GradientTealBlue } from './vx-gradient'
+import { Bar } from '../../packages/vx-shape'
+import { Group } from '../../packages/vx-group'
+import { GradientTealBlue } from '../../packages/vx-gradient'
 import { letterFrequency } from '@vx/mock-data'
 import { max } from 'd3-array'
-import { scaleBand, scaleLinear } from './vx-scale';
+import { scaleBand, scaleLinear } from '../../packages/vx-scale';
 
 export default {
   props: {

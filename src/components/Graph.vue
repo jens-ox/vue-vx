@@ -30,11 +30,11 @@
   </svg>
 </template>
 <script>
-import { Group } from './vx-group'
-import { LinePath } from './vx-shape'
+import { Group } from '../../packages/vx-group'
+import { LinePath } from '../../packages/vx-shape'
 import { curveMonotoneX } from 'd3-shape'
-import { genDateValue } from './vx-mock-data'
-import { scaleTime, scaleLinear } from './vx-scale'
+import { genDateValue } from '../../packages/vx-mock-data'
+import { scaleTime, scaleLinear } from '../../packages/vx-scale'
 import { extent, max } from 'd3-array'
 
 export default {

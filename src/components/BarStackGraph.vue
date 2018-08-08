@@ -73,15 +73,15 @@
   </div>
 </template>
 <script>
-import { BarStack } from './vx-shape'
-import { Group } from './vx-group'
-import { Grid } from './vx-grid'
-import { AxisBottom } from './vx-axis'
-import { cityTemperature } from './vx-mock-data'
-import { scaleBand, scaleLinear, scaleOrdinal } from './vx-scale'
+import { BarStack } from '../../packages/vx-shape'
+import { Group } from '../../packages/vx-group'
+import { Grid } from '../../packages/vx-grid'
+import { AxisBottom } from '../../packages/vx-axis'
+import { cityTemperature } from '../../packages/vx-mock-data'
+import { scaleBand, scaleLinear, scaleOrdinal } from '../../packages/vx-scale'
 import { timeParse, timeFormat } from 'd3-time-format'
-import { withTooltip, Tooltip } from './vx-tooltip'
-import { LegendOrdinal } from './vx-legend'
+import { withTooltip, Tooltip } from '../../packages/vx-tooltip'
+import { LegendOrdinal } from '../../packages/vx-legend'
 import { max } from 'd3-array'
 
 export default {

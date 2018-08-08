@@ -93,7 +93,7 @@
   </svg>
 </template>
 <script>
-import { Bar } from './vx-shape'
+import { Bar } from '../../packages/vx-shape'
 import {
   GradientDarkgreenGreen,
   GradientLightgreenGreen,
@@ -106,7 +106,7 @@ import {
   GradientSteelPurple,
   GradientTealBlue,
   RadialGradient,
-} from './vx-gradient'
+} from '../../packages/vx-gradient'
 
 export default {
   props: {

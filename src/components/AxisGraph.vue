@@ -70,14 +70,14 @@
   </svg>
 </template>
 <script>
-import { Grid } from './vx-grid'
-import { Group } from './vx-group'
-import { curveBasis } from './vx-curve'
-import { GradientOrangeRed } from './vx-gradient'
-import { genDateValue } from './vx-mock-data'
-import { AxisLeft, AxisRight, AxisBottom } from './vx-axis'
-import { AreaClosed, LinePath, LineShape } from './vx-shape'
-import { scaleTime, scaleLinear } from './vx-scale'
+import { Grid } from '../../packages/vx-grid'
+import { Group } from '../../packages/vx-group'
+import { curveBasis } from '../../packages/vx-curve'
+import { GradientOrangeRed } from '../../packages/vx-gradient'
+import { genDateValue } from '../../packages/vx-mock-data'
+import { AxisLeft, AxisRight, AxisBottom } from '../../packages/vx-axis'
+import { AreaClosed, LinePath, LineShape } from '../../packages/vx-shape'
+import { scaleTime, scaleLinear } from '../../packages/vx-scale'
 import { extent, max } from 'd3-array'
 
 export default {

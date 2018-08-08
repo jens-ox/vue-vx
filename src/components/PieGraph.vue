@@ -41,10 +41,10 @@
   </svg>
 </template>
 <script>
-import { Pie } from './vx-shape'
-import { Group } from './vx-group'
-import { GradientPinkBlue } from './vx-gradient'
-import { letterFrequency, browserUsage } from './vx-mock-data'
+import { Pie } from '../../packages/vx-shape'
+import { Group } from '../../packages/vx-group'
+import { GradientPinkBlue } from '../../packages/vx-gradient'
+import { letterFrequency, browserUsage } from '../../packages/vx-mock-data'
 
 export default {
   props: {

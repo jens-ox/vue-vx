@@ -39,12 +39,12 @@
     </div>
 </template>
 <script>
-import { Group } from './vx-group'
-import { GlyphCircle } from './vx-glyph'
-import { GradientPinkRed } from './vx-gradient'
-import { scaleLinear } from './vx-scale'
-import { genRandomNormalPoints } from './vx-mock-data'
-import { withTooltip, Tooltip } from './vx-tooltip'
+import { Group } from '../../packages/vx-group'
+import { GlyphCircle } from '../../packages/vx-glyph'
+import { GradientPinkRed } from '../../packages/vx-gradient'
+import { scaleLinear } from '../../packages/vx-scale'
+import { genRandomNormalPoints } from '../../packages/vx-mock-data'
+import { withTooltip, Tooltip } from '../../packages/vx-tooltip'
 
 export default {
   props: {

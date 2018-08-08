@@ -38,11 +38,11 @@
   </svg>
 </template>
 <script>
-import { BarGroup } from './vx-shape'
-import { Group } from './vx-group'
-import { AxisBottom } from './vx-axis'
-import { cityTemperature } from './vx-mock-data'
-import { scaleBand, scaleLinear, scaleOrdinal } from './vx-scale'
+import { BarGroup } from '../../packages/vx-shape'
+import { Group } from '../../packages/vx-group'
+import { AxisBottom } from '../../packages/vx-axis'
+import { cityTemperature } from '../../packages/vx-mock-data'
+import { scaleBand, scaleLinear, scaleOrdinal } from '../../packages/vx-scale'
 import { timeParse, timeFormat } from 'd3-time-format'
 import { max } from 'd3-array'
 

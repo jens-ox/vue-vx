@@ -106,20 +106,20 @@ import {
   LegendOrdinal,
   LegendSize,
   LegendThreshold,
-} from './vx-legend'
+} from '../../packages/vx-legend'
 import {
   scaleQuantize,
   scaleLinear,
   scaleOrdinal,
   scaleThreshold,
-} from './vx-scale'
+} from '../../packages/vx-scale'
 
 import {
   GlyphStar,
   GlyphWye,
   GlyphTriangle,
   GlyphDiamond,
-} from './vx-glyph'
+} from '../../packages/vx-glyph'
 
 export default {
   computed: {

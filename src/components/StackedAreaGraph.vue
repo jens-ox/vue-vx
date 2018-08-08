@@ -25,10 +25,10 @@
   </svg>
 </template>
 <script>
-import { AreaStack } from './vx-shape'
-import { GradientOrangeRed } from './vx-gradient'
-import { browserUsage } from './vx-mock-data'
-import { scaleTime, scaleLinear } from './vx-scale'
+import { AreaStack } from '../../packages/vx-shape'
+import { GradientOrangeRed } from '../../packages/vx-gradient'
+import { browserUsage } from '../../packages/vx-mock-data'
+import { scaleTime, scaleLinear } from '../../packages/vx-scale'
 import { extent } from 'd3-array'
 import { timeParse } from 'd3-time-format'
 import { stack as d3stack } from 'd3-shape'

@@ -53,13 +53,13 @@
   </svg>
 </template>
 <script>
-import { Group } from './vx-group'
-import { LineRadial } from './vx-shape'
-import { scaleTime, scaleLog } from './vx-scale'
-import { curveBasisOpen } from './vx-curve'
-import { appleStock } from './vx-mock-data'
+import { Group } from '../../packages/vx-group'
+import { LineRadial } from '../../packages/vx-shape'
+import { scaleTime, scaleLog } from '../../packages/vx-scale'
+import { curveBasisOpen } from '../../packages/vx-curve'
+import { appleStock } from '../../packages/vx-mock-data'
 import { extent } from 'd3-array'
-import { LinearGradient } from './vx-gradient'
+import { LinearGradient } from '../../packages/vx-gradient'
 
 export default {
   data () {

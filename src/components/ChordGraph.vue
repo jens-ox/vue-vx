@@ -37,11 +37,11 @@
   </svg>
 </template>
 <script>
-import { Group } from './vx-group'
-import { LinearGradient } from './vx-gradient'
-import { Chord, Ribbon } from './vx-chord'
-import { Arc } from './vx-shape'
-import { scaleOrdinal } from './vx-scale'
+import { Group } from '../../packages/vx-group'
+import { LinearGradient } from '../../packages/vx-gradient'
+import { Chord, Ribbon } from '../../packages/vx-chord'
+import { Arc } from '../../packages/vx-shape'
+import { scaleOrdinal } from '../../packages/vx-scale'
 
 export default {
   props: {

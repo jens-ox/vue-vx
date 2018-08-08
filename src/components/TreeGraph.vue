@@ -59,11 +59,11 @@
   </svg>
 </template>
 <script>
-import { Group } from './vx-group'
-import { Tree } from './vx-hierarchy'
-import { LinkHorizontal } from './vx-shape'
+import { Group } from '../../packages/vx-group'
+import { Tree } from '../../packages/vx-hierarchy'
+import { LinkHorizontal } from '../../packages/vx-shape'
 import { hierarchy } from 'd3-hierarchy'
-import { LinearGradient } from './vx-gradient'
+import { LinearGradient } from '../../packages/vx-gradient'
 
 export default {
   props: {

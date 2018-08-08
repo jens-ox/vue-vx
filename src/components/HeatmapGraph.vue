@@ -46,10 +46,10 @@
   </svg>
 </template>
 <script>
-import { Group } from './vx-group'
-import { genBins } from './vx-mock-data'
-import { scaleLinear } from './vx-scale'
-import { Heatmap } from './vx-heatmap'
+import { Group } from '../../packages/vx-group'
+import { genBins } from '../../packages/vx-mock-data'
+import { scaleLinear } from '../../packages/vx-scale'
+import { Heatmap } from '../../packages/vx-heatmap'
 import { min, max } from 'd3-array'
 
 export default {

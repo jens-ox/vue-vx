@@ -57,14 +57,14 @@
   </svg>
 </template>
 <script>
-import { Group } from './vx-group'
-import { curveBasis } from './vx-curve'
-import { LinePath } from './vx-shape'
-import { Threshold } from './vx-threshold'
-import { scaleTime, scaleLinear } from './vx-scale'
-import { AxisLeft, AxisBottom } from './vx-axis'
-import { GridRows, GridColumns } from './vx-grid'
-import { cityTemperature } from './vx-mock-data'
+import { Group } from '../../packages/vx-group'
+import { curveBasis } from '../../packages/vx-curve'
+import { LinePath } from '../../packages/vx-shape'
+import { Threshold } from '../../packages/vx-threshold'
+import { scaleTime, scaleLinear } from '../../packages/vx-scale'
+import { AxisLeft, AxisBottom } from '../../packages/vx-axis'
+import { GridRows, GridColumns } from '../../packages/vx-grid'
+import { cityTemperature } from '../../packages/vx-mock-data'
 import { timeParse } from 'd3-time-format'
 
 export default {

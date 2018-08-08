@@ -47,11 +47,11 @@
 </template>
 <script>
 import { extent } from 'd3-array'
-import { Group } from './vx-group'
-import { GradientOrangeRed, GradientPinkRed } from './vx-gradient'
-import { RectClipPath } from './vx-clip-path'
-import { scaleLinear } from './vx-scale'
-import { voronoi, VoronoiPolygon } from './vx-voronoi'
+import { Group } from '../../packages/vx-group'
+import { GradientOrangeRed, GradientPinkRed } from '../../packages/vx-gradient'
+import { RectClipPath } from '../../packages/vx-clip-path'
+import { scaleLinear } from '../../packages/vx-scale'
+import { voronoi, VoronoiPolygon } from '../../packages/vx-voronoi'
 
 export default {
   props: {

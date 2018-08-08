@@ -130,14 +130,14 @@
   </div>
 </template>
 <script>
-import { AreaClosed, LineShape, Bar } from './vx-shape'
-import { appleStock } from './vx-mock-data'
-import { curveMonotoneX } from './vx-curve'
-import { LinearGradient } from './vx-gradient'
-import { GridRows, GridColumns } from './vx-grid'
-import { scaleTime, scaleLinear } from './vx-scale'
-import { withTooltip, Tooltip } from './vx-tooltip'
-import { localPoint } from './vx-event'
+import { AreaClosed, LineShape, Bar } from '../../packages/vx-shape'
+import { appleStock } from '../../packages/vx-mock-data'
+import { curveMonotoneX } from '../../packages/vx-curve'
+import { LinearGradient } from '../../packages/vx-gradient'
+import { GridRows, GridColumns } from '../../packages/vx-grid'
+import { scaleTime, scaleLinear } from '../../packages/vx-scale'
+import { withTooltip, Tooltip } from '../../packages/vx-tooltip'
+import { localPoint } from '../../packages/vx-event'
 import { extent, max, bisector } from 'd3-array'
 import { timeFormat } from 'd3-time-format'
 

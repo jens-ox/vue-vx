@@ -59,12 +59,12 @@
   </svg>
 </template>
 <script>
-import { Group } from './vx-group';
-import { GlyphDot } from './vx-glyph';
-import { LinePath } from './vx-shape';
-import { genDateValue } from './vx-mock-data';
-import { scaleTime, scaleLinear } from './vx-scale';
-import { curveBasis, curveMonotoneX } from './vx-curve';
+import { Group } from '../../packages/vx-group';
+import { GlyphDot } from '../../packages/vx-glyph';
+import { LinePath } from '../../packages/vx-shape';
+import { genDateValue } from '../../packages/vx-mock-data';
+import { scaleTime, scaleLinear } from '../../packages/vx-scale';
+import { curveBasis, curveMonotoneX } from '../../packages/vx-curve';
 import { extent, max } from 'd3-array';
 
 export default {
