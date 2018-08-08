@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "d3-chord": "^1.0.4",
@@ -23,7 +25,8 @@
     "@vx/mock-data": "0.0.165",
     "@vx/point": "^0.0.165",
     "@vx/scale": "0.0.165",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "vuepress": "^0.14.0"
   },
   "eslintConfig": {
     "root": true,
