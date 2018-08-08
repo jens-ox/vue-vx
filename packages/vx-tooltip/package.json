@@ -1,6 +1,6 @@
 {
   "name": "@vue-vx/tooltip",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "vue-vx tooltip",
   "sideEffects": false,
   "main": "src/index.js",
@@ -63,5 +63,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "ef30b570f2ff8823e5bedaf2eeb757aa225bbd68"
+  "gitHead": "56999d684816b409302f24b61399a9bb61932766"
 }
