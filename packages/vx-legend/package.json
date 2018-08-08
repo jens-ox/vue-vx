@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/jens-ox/vue-vx#readme",
   "dependencies": {
+    "@vue-vx/group": "^0.2.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {

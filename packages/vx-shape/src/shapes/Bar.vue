@@ -7,15 +7,14 @@
     :height="height"
     :rx="rx"
     :ry="ry"
-    :style="[defaultRectStyle, rectStyle]"
+    :style="[rectStyle]"
   />
 </template>
 <script>
-import { defaultRectStyle } from '@vue-vx/defaults'
 export default {
   data () {
     return {
-      defaultRectStyle
+      defaults
     }
   },
   props: {
