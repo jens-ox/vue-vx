@@ -1,6 +1,6 @@
 {
   "name": "@vue-vx/mock-data",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "vue-vx mock-data",
   "sideEffects": false,
   "main": "src/main.js",
@@ -63,5 +63,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "fde1ec6b4dabdbec127a47d62fc89d45e7e643d2"
+  "gitHead": "ef30b570f2ff8823e5bedaf2eeb757aa225bbd68"
 }
