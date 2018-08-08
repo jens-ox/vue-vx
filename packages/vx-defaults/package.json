@@ -1,11 +1,11 @@
 {
-  "name": "@vue-vx/shape",
+  "name": "@vue-vx/defaults",
   "version": "0.2.0",
-  "description": "vue-vx shape",
+  "description": "vue-vx defaults",
   "sideEffects": false,
   "main": "src/index.js",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name shape ./src/index.js"
+    "build": "vue-cli-service build --target lib --name defaults ./src/index.js"
   },
   "files": [
     "src"
@@ -28,10 +28,6 @@
   },
   "homepage": "https://github.com/jens-ox/vue-vx#readme",
   "dependencies": {
-    "@vue-vx/curve": "^0.2.0",
-    "@vue-vx/defaults": "^0.2.0",
-    "@vue-vx/group": "^0.2.0",
-    "@vue-vx/point": "^0.2.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {

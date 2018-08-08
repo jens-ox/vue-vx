@@ -9,6 +9,7 @@ export default {
       tooltipOpen: false,
       tooltipLeft: 0,
       tooltipTop: 0,
+      tooltipTimeout: null,
       tooltipData: []
     }
   },
@@ -27,10 +28,12 @@ export default {
         tooltipData
       })
     },
-    hideTooltip () {
-      this.updateTooltip({
-        tooltipOpen: false
-      })
+    hideTooltip (delay = 0) {
+      this.tooltipTimeout = setTimeout(() => {
+        this.updateTooltip({
+          tooltipOpen: false
+        })
+      }, delay)
     }
   }
 }

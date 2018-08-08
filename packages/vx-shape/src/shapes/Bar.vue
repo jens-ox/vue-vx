@@ -7,20 +7,17 @@
     :height="height"
     :rx="rx"
     :ry="ry"
-    :fill="fill"
-    :fillOpacity="fillOpacity"
-    :stroke="stroke"
-    :stroke-width="strokeWidth"
-    :stroke-dasharray="strokeDasharray"
-    :strokeLinecap="strokeLinecap"
-    :strokeLinejoin="strokeLinejoin"
-    :strokeMiterlimit="strokeMiterlimit"
-    :strokeOpacity="strokeOpacity"
-    v-bind="restProps"
+    :style="[defaultRectStyle, rectStyle]"
   />
 </template>
 <script>
+import { defaultRectStyle } from '@vue-vx/defaults'
 export default {
+  data () {
+    return {
+      defaultRectStyle
+    }
+  },
   props: {
     className: {
       type: String,
@@ -34,23 +31,26 @@ export default {
       type: Number,
       default: 0
     },
-    width: Number,
-    height: Number,
-    rx: Number,
-    ry: Number,
-    fill: {
-      type: String,
-      default: 'steelblue'
+    width: {
+      type: Number,
+      required: true
     },
-    fillOpacity: Number,
-    stroke: String,
-    strokeWidth: Number,
-    strokeDasharray: String,
-    strokeLinecap: String,
-    strokeLinejoin: String,
-    strokeMiterlimit: Number,
-    strokeOpacity: Number,
-    restProps: Object
+    height: {
+      type: Number,
+      required: true
+    },
+    rx: {
+      type: Number,
+      default: 0
+    },
+    ry: {
+      type: Number,
+      default: 0
+    },
+    rectStyle: {
+      type: Object,
+      default: () => {}
+    }
   }
 }
 </script>

@@ -6,7 +6,7 @@
       :y="0"
       :width="width"
       :height="height"
-      :fill="`url(#teal)`"
+      fill="url(#teal)"
       :rx="14"
     />
     <Group :top="40">
@@ -16,7 +16,9 @@
           :height="barHeight(d)"
           :x="xScale(x(d))"
           :y="yMax - barHeight(d)"
-          fill="rgba(23, 233, 217, .5)"
+          :rectStyle="{
+            fill: 'rgba(23, 233, 217, .5)'
+          }"
           @click="alert(`clicked: ${JSON.stringify(d)}`)"
         />
       </Group>

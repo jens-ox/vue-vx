@@ -1,5 +1,5 @@
 <template>
-    <div v-if="width >= 10" :style="{ position: 'relative', width: width + 'px', height: height + 'px', margin: '0 auto' }">
+    <div :style="{ position: 'relative' }">
       <svg :width="width" :height="height">
         <GradientPinkRed useID="pink" />
         <rect
@@ -8,10 +8,10 @@
           :width="width"
           :height="height"
           :rx="14"
-          :fill="`url(#pink)`"
+          fill="url(#pink)"
         />
         <Group
-          v-on:touchStart.native="groupTouch"
+          v-on:touchStart.native="hideTooltip"
         >
           <GlyphCircle
             v-for="(point, i) in points"
@@ -24,7 +24,7 @@
             :size="i % 3 === 0 ? 12 : 24"
             v-on:mouseover.native="circleEnter(point)"
             v-on:touchstart.native="circleTouch(point)"
-            v-on:mouseleave.native="circleLeave"
+            v-on:mouseleave.native="hideTooltip(300)"
           ></GlyphCircle>
         </Group>
       </svg>
@@ -53,8 +53,7 @@ export default {
   },
   data () {
     return {
-      points: [],
-      tooltipTimeout: null
+      points: []
     }
   },
   computed: {
@@ -90,10 +89,6 @@ export default {
     z (d) { return d[2] },
 
     // event handlers
-    groupTouch () {
-      if (this.tooltipTimeout) clearTimeout(this.tooltipTimeout)
-      this.tooltipOpen = false
-    },
     circleEnter (point) {
       if (this.tooltipTimeout) clearTimeout(this.tooltipTimeout)
       this.showTooltip({
@@ -109,11 +104,6 @@ export default {
         tooltipTop: this.yScale(this.y(point)) - 30,
         tooltipData: point
       })
-    },
-    circleLeave () {
-      this.tooltipTimeout = setTimeout(() => {
-        this.hideTooltip()
-      }, 300)
     }
   },
   components: {

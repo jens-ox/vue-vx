@@ -15,9 +15,11 @@
         :yScale="yScale"
         :x="x"
         :y="y"
-        stroke='#7e20dc'
-        :stroke-width="2"
-        stroke-dasharray='2,2'
+        :pathStyle="{
+          stroke: '#7e20dc',
+          strokeWidth: 2,
+          strokeDasharray: '2,2'
+        }"
         :curve="curveBasis"
       />
       <LinePath
@@ -26,8 +28,10 @@
         :yScale="yScale"
         :x="x"
         :y="y"
-        stroke='#7e20dc'
-        :stroke-width="3"
+        :pathStyle="{
+          stroke: '#7e20dc',
+          strokeWidth: 3
+        }"
         :curve="curveMonotoneX"
       >
         <g v-for="(d, i) in data" v-bind:key="`line-point-${i}`">
