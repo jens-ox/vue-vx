@@ -1,0 +1,69 @@
+{
+  "name": "@vue-vx/shape",
+  "version": "0.1.0",
+  "description": "vue-vx shape",
+  "sideEffects": false,
+  "main": "src/index.js",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name shape ./src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jens-ox/vue-vx.git"
+  },
+  "keywords": [
+    "vue-vx",
+    "vue",
+    "d3",
+    "visualizations",
+    "charts"
+  ],
+  "author": "@jens-ox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jens-ox/vue-vx/issues"
+  },
+  "homepage": "https://github.com/jens-ox/vue-vx#readme",
+  "dependencies": {
+    "@vue-vx/curve": "^0.1.0",
+    "@vue-vx/group": "^0.1.0",
+    "@vue-vx/point": "^0.1.0",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.10",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
+    "@vue/cli-service": "^3.0.0-rc.10",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
