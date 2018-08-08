@@ -12,11 +12,6 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      defaults
-    }
-  },
   props: {
     className: {
       type: String,
