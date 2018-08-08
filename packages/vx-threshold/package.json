@@ -1,6 +1,6 @@
 {
   "name": "@vue-vx/threshold",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vue-vx threshold",
   "sideEffects": false,
   "main": "src/index.js",
@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/jens-ox/vue-vx#readme",
   "dependencies": {
-    "@vue-vx/clip-path": "^0.1.0",
-    "@vue-vx/shape": "^0.1.0",
+    "@vue-vx/clip-path": "^0.1.1",
+    "@vue-vx/shape": "^0.1.1",
     "vue": "^2.5.16"
   },
   "devDependencies": {
@@ -64,5 +64,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "be8cbfbe14be6709060aa9e9e4f64cd7c3f24747"
 }

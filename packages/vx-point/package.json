@@ -1,6 +1,6 @@
 {
   "name": "@vue-vx/point",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vue-vx point",
   "sideEffects": false,
   "main": "src/index.js",
@@ -62,5 +62,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "be8cbfbe14be6709060aa9e9e4f64cd7c3f24747"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@vue-vx/shape",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vue-vx shape",
   "sideEffects": false,
   "main": "src/index.js",
@@ -28,9 +28,9 @@
   },
   "homepage": "https://github.com/jens-ox/vue-vx#readme",
   "dependencies": {
-    "@vue-vx/curve": "^0.1.0",
-    "@vue-vx/group": "^0.1.0",
-    "@vue-vx/point": "^0.1.0",
+    "@vue-vx/curve": "^0.1.1",
+    "@vue-vx/group": "^0.1.1",
+    "@vue-vx/point": "^0.1.1",
     "vue": "^2.5.16"
   },
   "devDependencies": {
@@ -65,5 +65,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "be8cbfbe14be6709060aa9e9e4f64cd7c3f24747"
 }

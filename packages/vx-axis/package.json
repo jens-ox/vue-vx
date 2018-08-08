@@ -1,6 +1,6 @@
 {
   "name": "@vue-vx/axis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vue-vx axis",
   "sideEffects": false,
   "main": "src/index.js",
@@ -29,8 +29,8 @@
   "homepage": "https://github.com/jens-ox/vue-vx#readme",
   "dependencies": {
     "@vue-vx/group": "0.0.170",
-    "@vue-vx/point": "^0.1.0",
-    "@vue-vx/shape": "^0.1.0"
+    "@vue-vx/point": "^0.1.1",
+    "@vue-vx/shape": "^0.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-rc.10",
@@ -64,5 +64,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "be8cbfbe14be6709060aa9e9e4f64cd7c3f24747"
 }
