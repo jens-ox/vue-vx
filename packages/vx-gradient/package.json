@@ -1,6 +1,6 @@
 {
   "name": "@vue-vx/gradient",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "vue-vx gradient",
   "sideEffects": false,
   "main": "src/index.js",
@@ -63,5 +63,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "be8cbfbe14be6709060aa9e9e4f64cd7c3f24747"
+  "gitHead": "fde1ec6b4dabdbec127a47d62fc89d45e7e643d2"
 }
