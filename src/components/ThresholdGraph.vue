@@ -38,10 +38,12 @@
         :y="sf"
         :xScale="xScale"
         :yScale="yScale"
-        stroke="#000"
-        :strokeWidth="1.5"
-        :strokeOpacity="0.8"
-        strokeDasharray="1,2"
+        :pathStyle="{
+          stroke: '#000',
+          strokeWidth: 1.5,
+          strokeOpacity: 0.8,
+          strokeDasharray: '1,2'
+        }"
       />
       <LinePath
         :data="data"
@@ -50,8 +52,10 @@
         :y="ny"
         :xScale="xScale"
         :yScale="yScale"
-        stroke="#000"
-        :strokeWidth="1.5"
+        :pathStyle="{
+          stroke: '#000',
+          strokeWidth: 1.5
+        }"
       />
     </Group>
   </svg>

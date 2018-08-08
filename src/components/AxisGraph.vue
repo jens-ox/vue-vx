@@ -30,8 +30,10 @@
         :yScale="yScale"
         :x="x"
         :y="y"
-        stroke="url('#linear')"
-        :strokeWidth="2"
+        :pathStyle="{
+          stroke: 'url(\'#linear\')',
+          strokeWidth: 2
+        }"
         :curve="curveBasis"
       />
     </Group>
